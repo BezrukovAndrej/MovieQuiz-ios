@@ -82,6 +82,6 @@ class MovieQuizUITests: XCTestCase {
         sleep(2)
         
         XCTAssertFalse(alert.exists)
-        XCTAssertTrue(app.staticTexts["Index"].label == "1/10")
+        XCTAssertEqual(app.staticTexts["Index"].label, "1/10")
     }
 }
