@@ -10,12 +10,9 @@ final class MovieQuizPresenter: QuestionFactoryDelegate {
     var questionFactory: QuestionFactoryProtocol?
     private weak var viewController: MovieQuizViewControllerProtocol?
     
-    
     init(viewController: MovieQuizViewControllerProtocol = MovieQuizViewController()) {
         self.viewController = viewController
-        
         statisticService = StatisticServiceImplementation()
-        
         questionFactory = QuestionFactory(moviesLoader: MoviesLoader(), delegate: self)
         questionFactory?.loadData()
         viewController.showLoadingIndicator()
@@ -79,6 +76,7 @@ final class MovieQuizPresenter: QuestionFactoryDelegate {
         
         viewController?.highlightImageBorder(isCorrectAnswer: isCorrect)
         
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [weak self] in
             guard let self = self else { return }
             self.proceedToNextQuestionOrResults()
@@ -104,9 +102,7 @@ final class MovieQuizPresenter: QuestionFactoryDelegate {
             return
         }
         
-        let givenAnswer = isYes
-        
-        proceedWithAnswer(isCorrect: givenAnswer == currentQuestion.correctAnswer)
+        proceedWithAnswer(isCorrect: isYes == currentQuestion.correctAnswer)
     }
     
     func restartGame() {

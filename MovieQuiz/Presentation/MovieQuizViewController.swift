@@ -46,6 +46,7 @@ final class MovieQuizViewController: UIViewController, MovieQuizViewControllerPr
     func showLoadingIndicator() {
         activityIndicator.isHidden = false
         activityIndicator.startAnimating()
+
     }
     
     func hideLoadingIndicator() {
@@ -88,9 +89,14 @@ final class MovieQuizViewController: UIViewController, MovieQuizViewControllerPr
         imageView.image = step.image
         textLabel.text = step.question
         counterLabel.text = step.questionNumber
+        
+        yesButton.isEnabled = true
+        noButton.isEnabled = true
     }
     
     func highlightImageBorder(isCorrectAnswer: Bool) {
+        yesButton.isEnabled = false
+        noButton.isEnabled = false
         imageView.layer.masksToBounds = true
         imageView.layer.borderWidth = 8
         imageView.layer.borderColor = isCorrectAnswer ? UIColor.ypGreen.cgColor : UIColor.ypRed.cgColor
