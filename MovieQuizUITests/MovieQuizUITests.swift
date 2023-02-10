@@ -85,4 +85,4 @@ class MovieQuizUITests: XCTestCase {
         XCTAssertEqual(app.staticTexts["Index"].label, "1/10")
     }
 }
-//["Этот раунд окончен!"]
+
