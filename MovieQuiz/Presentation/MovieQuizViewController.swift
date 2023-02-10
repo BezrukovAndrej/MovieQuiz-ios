@@ -65,7 +65,6 @@ final class MovieQuizViewController: UIViewController, MovieQuizViewControllerPr
             self.noButton.isEnabled = true
             self.yesButton.isEnabled = true
         }
-        
     }
     
     func showNetworkError(message: String) {
