@@ -3,7 +3,7 @@
 MovieQuiz - это приложение с квизами о фильмах из топ-250 рейтинга и самых популярных фильмах по версии IMDb.
 
 ## **Скриншот**
-[url=https://ibb.co/RjnRVhg][img]https://i.ibb.co/GHwzbsd/foto.png[/img][/url]
+<a href="https://ibb.co/RjnRVhg"><img src="https://i.ibb.co/GHwzbsd/foto.png" alt="foto" border="0"></a>
 
 ## **Ссылки**
 
